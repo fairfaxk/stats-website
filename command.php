@@ -1,6 +1,6 @@
 <?php
 if (!empty($_GET["act"])){
-	$file = "txts/customCommands.txt";
+	$file = "resources/customCommands.txt";
 	// Delete all commands
 	if(htmlspecialchars($_GET["act"]) == "clear"){
 		file_put_contents($file, "");
@@ -46,10 +46,10 @@ if (!empty($_GET["act"])){
 		window.onload = function () {
             var intervalId;
             var int;
-			getText("customCommandsOutput", "txts/customCommandsOutput.txt");
+			getText("customCommandsOutput", "resources/customCommandsOutput.txt");
 			int = 5000;
 			intervalId = setInterval(function () {
-				getText("customCommandsOutput", "txts/customCommandsOutput.txt");
+				getText("customCommandsOutput", "resources/customCommandsOutput.txt");
 			}, int);
 		}
 	</script>
@@ -101,7 +101,7 @@ if (!empty($_GET["act"])){
             <div class="col-sm-4 text-center">
                 <?php
                     $str = "<b>Current Custom Commands</b><div class='border border-primary'>";
-                    $file = "txts/customCommands.txt";
+                    $file = "resources/customCommands.txt";
                     $current = file_get_contents($file);
 
                     foreach(preg_split("/((\r?\n)|(\r\n?))/", $current) as $line){

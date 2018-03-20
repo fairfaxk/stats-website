@@ -6,30 +6,6 @@
 	<title>Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<script type="text/javascript" src="custom.js"></script>
-	<script type="text/javascript">
-		window.onload = function () {
-			var intervalId;
-			var int;
-			getText("reloadableContent1", "txts/exampleDiskStats.txt");
-			getText("reloadableContent2", "txts/exampleMemStats.txt");
-			int = document.getElementById('refreshFrequency').value;
-			intervalId = setInterval(function () {
-				getText("reloadableContent1", "txts/exampleDiskStats.txt");
-				getText("reloadableContent2", "txts/exampleMemStats.txt");
-			}, int);
-			document.getElementById('refreshFrequency').onchange = function () {
-				if (intervalId) {
-					clearInterval(intervalId);
-				}
-				int = document.getElementById('refreshFrequency').value;
-				intervalId = setInterval(function () {
-					getText("reloadableContent1", "txts/exampleDiskStats.txt");
-					getText("reloadableContent2", "txts/exampleMemStats.txt");
-				}, int);
-			}
-		}
-	</script>
 </head>
 
 <body>
@@ -75,28 +51,20 @@
 				<a href="details.php?detail=GPUU">GPU Usage</a>
 			</div>
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=NETU">Network Usage</a>
+				<a href="details.php?detail=DISU">Disk Usage</a>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=DISU">Disk Usage</a>
+				<a href="details.php?detail=NETD">Network Download Usage</a>
 			</div>
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=DISS">Disk Storage</a>
+				<a href="details.php?detail=NETU">Network Upload Usage</a>
 			</div>
 		</div>
 	</div>
-	<br />
-	<div class="container">
-		<p class="text-center">Reloadable Content 1 Test</p>
-		<p id="reloadableContent1" class="text-center"></p>
-		<p class="text-center">Reloadable Content 2 Test</p>
-		<p id="reloadableContent2" class="text-center"></p>
-	</div>
-
 </body>
 <script type="text/javascript">
 	document.getElementById('day').addEventListener("click", function (event) {
