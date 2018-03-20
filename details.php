@@ -36,19 +36,43 @@
             </div>
         </div>
     </div>
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <?php
+                    if ($_GET["detail"] == "CPUU"){
+                        echo "CPU USAGE";
+                    }else if ($_GET["detail"] == "RAMU"){
+                        echo "RAM USAGE";
+                    }else if ($_GET["detail"] == "GPUU"){
+                        echo "GPU USAGE";
+                    }else if ($_GET["detail"] == "DISU"){
+                        echo "DISK USAGE";
+                    }else if ($_GET["detail"] == "NETD"){
+                        echo "NETWORK DOWNLOAD USAGE";
+                    }else if ($_GET["detail"] == "NETU"){
+                        echo "NETWORK UPLOAD USAGE";
+                    }else{
+                        header('Location: index.php');
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript">
-	document.getElementById('day').addEventListener("click", function (event) {
+	document.getElementById("day").addEventListener("click", function (event) {
 		(function (event) {
-			document.body.style.color ='black';
-			document.body.style.background = 'white';
-		}).call(document.getElementById('day'), event);
+			document.body.style.color ="black";
+			document.body.style.background = "white";
+		}).call(document.getElementById("day"), event);
 	});
-	document.getElementById('night').addEventListener("click", function (event) {
+	document.getElementById("night").addEventListener("click", function (event) {
 		(function (event) {
-			document.body.style.color = 'white';
-			document.body.style.background = 'black';
-		}).call(document.getElementById('night'), event);
+			document.body.style.color = "white";
+			document.body.style.background = "black";
+		}).call(document.getElementById("night"), event);
 	});
 </script>
 
