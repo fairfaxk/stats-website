@@ -45,14 +45,10 @@
                         echo "CPU USAGE";
                     }else if ($_GET["detail"] == "RAMU"){
                         echo "RAM USAGE";
-                    }else if ($_GET["detail"] == "GPUU"){
-                        echo "GPU USAGE";
                     }else if ($_GET["detail"] == "DISU"){
                         echo "DISK USAGE";
-                    }else if ($_GET["detail"] == "NETD"){
-                        echo "NETWORK DOWNLOAD USAGE";
                     }else if ($_GET["detail"] == "NETU"){
-                        echo "NETWORK UPLOAD USAGE";
+                        echo "NETWORK USAGE";
                     }else{
                         header('Location: index.php');
                     }

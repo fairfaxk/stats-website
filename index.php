@@ -49,21 +49,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=GPUU">GPU Usage</a>
-			</div>
-			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=DISU">Disk Usage</a>
 			</div>
-		</div>
-	</div>
-	<br />
-	<div class="container">
-		<div class="row">
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=NETD">Network Download Usage</a>
-			</div>
-			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=NETU">Network Upload Usage</a>
+				<a href="details.php?detail=NETU">Network Usage</a>
 			</div>
 		</div>
 	</div>
