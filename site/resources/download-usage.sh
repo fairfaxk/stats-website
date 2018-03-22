@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "DATE,USAGE" > download-usage.txt
+echo "DATE,USAGE" > download-usage.csv
 
 while [ 1 -eq 1 ]
 do
@@ -11,12 +11,12 @@ totalBytesLater=`cat /proc/net/dev | grep ':' | head -n 1 | awk '{print $2}'`
 
 kbps=`echo "$totalBytes $totalBytesLater" | awk '{print ($2 - $1)/1000}'`
 
-echo -n `date | awk '{print $4}'`"," >> download-usage.txt
-echo "$kbps" >> download-usage.txt
+echo -n `date | awk '{print $4}'`"," >> download-usage.csv
+echo "$kbps" >> download-usage.csv
 
-if [ "$(cat download-usage.txt | wc -l)" == "62" ]
+if [ "$(cat download-usage.csv | wc -l)" == "62" ]
 then
-sed -i -e '2d' download-usage.txt
+sed -i -e '2d' download-usage.csv
 fi
 
 done
