@@ -18,7 +18,7 @@ if (!empty($_GET["act"])){
 				$out .= "\n";
 			}
         }
-        
+
 		file_put_contents($file, $out);
 	}
 	// Add command to end of file
@@ -41,7 +41,7 @@ if (!empty($_GET["act"])){
     <title>Custom Command</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script type="text/javascript" src="custom.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
     <script type="text/javascript">
 		window.onload = function () {
             var intervalId;
