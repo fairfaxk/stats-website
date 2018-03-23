@@ -14,9 +14,10 @@ do
          if [ "$line" != "$newline" ]
          then
 
-                 echo "Custom Command: $line" >> $2
-
-                 eval "Output: $line" &>> $2
+                 echo "$line:" >> $2
+		 echo "========================" >> $2
+                 eval "$line" &>> $2
+		 echo >> $2
 
          fi
  done < "$1"

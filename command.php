@@ -92,10 +92,8 @@ if (!empty($_GET["act"])){
             <div class="col-sm-8 text-center">
                 <b>Custom Commands Output</b>
                 <div class="border border-primary">
-                    <br />
                     <div id="customCommandsOutput">
                     </div>
-                    <br />
                 </div>
             </div>
             <div class="col-sm-4 text-center">
