@@ -16,7 +16,7 @@ var pie = d3.pie();
 //Easy colors accessible via a 10-step ordinal scale
 var color = d3.scaleOrdinal()
 	.domain(d3.range(2))
-	.range(['#00FF00', '#FF0000']);
+	.range(['#008000', '#FF0000']);
 
 //var dataset = [ 5, 10, 20, 45, 6, 25 ];
 
