@@ -45,12 +45,12 @@
 		<div class="row">
 			<div class="col-sm-6 text-center" id="cpu-chart">
 				<p>
-					<a href="details.php?detail=CPUU">CPU Usage</a>
+					<a href="details.php?detail=CPUU" style="position:relative;top:180px;">CPU</a>
 				</p>
 			</div>
 			<div class="col-sm-6 text-center" id="ram-chart">
 				<p>
-					<a href="details.php?detail=RAMU">RAM Usage</a>
+					<a href="details.php?detail=RAMU" style="position:relative;top:180px;">RAM</a>
 				</p>
 			</div>
 		</div>
@@ -59,12 +59,12 @@
 		<div class="row">
 			<div class="col-sm-6 text-center" id="download-chart">
 				<p>
-					<a href="details.php?detail=NETU">Network Download Usage</a>
+					<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↓</a>
 				</p>
 			</div>
 			<div class="col-sm-6 text-center" id="upload-chart">
 				<p>
-					<a href="details.php?detail=NETU">Network Upload Usage</a>
+					<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↑</a>
 				</p>
 			</div>
 		</div>
@@ -73,7 +73,7 @@
 		<div class="row ">
 			<div class="col-sm-6 align-items-center text-center" id="disk-chart">
 				<p>
-					<a href="details.php?detail=DISU">Disk Usage</a>
+					<a href="details.php?detail=DISU" style="position:relative;top:180px;">Disk</a>
 				</p>
 			</div>
 		</div>
