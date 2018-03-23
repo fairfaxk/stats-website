@@ -1,4 +1,4 @@
-d3.csv("../resources/ram-usage.csv", function (data) {
+d3.csv("resources/ram-usage.csv", function (data) {
 	data.forEach(function (d) {
 		data.USAGE = +data.USAGE;
 		data.TOTAL = +data.TOTAL;

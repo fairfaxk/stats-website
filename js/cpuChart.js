@@ -20,7 +20,7 @@ var color = d3.scaleOrdinal()
 
 //var dataset = [ 5, 10, 20, 45, 6, 25 ];
 
-d3.csv("../resources/cpu-usage.csv", function (data) {
+d3.csv("resources/cpu-usage.csv", function (data) {
 	data.forEach(function (d) {
 		data.USAGE = +data.USAGE;
 		//console.log(data);

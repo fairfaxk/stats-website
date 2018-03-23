@@ -1,4 +1,4 @@
-d3.csv("../resources/download-usage.csv", function (data) {
+d3.csv("resources/download-usage.csv", function (data) {
 	data.forEach(function (d) {
 		data.USAGE = +data.USAGE;
 		//console.log(data);
