@@ -39,7 +39,7 @@ if (!empty($_GET["act"])){
 <head>
     <meta charset="utf-8" />
     <title>Custom Command</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="../js/custom.js"></script>
     <script type="text/javascript">

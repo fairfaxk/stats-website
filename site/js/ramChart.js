@@ -4,14 +4,14 @@ d3.csv("../resources/ram-usage.csv", function(data) {
       data.TOTAL=+data.TOTAL;
 			//console.log(data);
 		})
-		drawMEMChart(data);
+		drawRAMChart(data);
   })
 
-function drawMEMChart(data){
+function drawRAMChart(data){
 	var dataset = [data[0].TOTAL-data[0].USAGE, data[0].USAGE ];
 
 	//Create SVG element
-	var svg = d3.select('#mem-chart')
+	var svg = d3.select('#ram-chart')
 				.append("svg")
 				.attr("width", w)
 				.attr("height", h);
