@@ -6,17 +6,20 @@ newline=`echo`
 
 while [ 1 -eq 1 ]
 do
+
+ echo > $2
+
  while read line;
  do
          if [ "$line" != "$newline" ]
          then
 
-                 echo "Custom Command: $line" >> $1
+                 echo "Custom Command: $line" >> $2
 
-                 eval "Output: $line" &>> $1
+                 eval "Output: $line" &>> $2
 
          fi
- done
+ done < "$1"
 
  sleep 1;
 
