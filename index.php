@@ -71,7 +71,7 @@
 	</div>
 	<div class="container">
 		<div class="row ">
-			<div class="col-sm-6 align-items-center text-center" id="disk-chart">
+			<div class="col-sm-12 text-center" id="disk-chart">
 				<p>
 					<a href="details.php?detail=DISU" style="position:relative;top:180px;">Disk</a>
 				</p>
