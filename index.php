@@ -19,6 +19,11 @@
 			var int;
 			int = document.getElementById('refreshFrequency').value;
 			intervalId = setInterval(function () {
+				$("#cpu-chart").empty();
+				$("#ram-chart").empty();
+				$("#download-chart").empty();
+				$("#upload-chart").empty();
+				$("#disk-chart").empty();
 				d3.csv("resources/cpu-usage.csv", function (data) {
 					data.forEach(function (d) {
 						data.USAGE = +data.USAGE;
@@ -63,6 +68,11 @@
 				}
 				int = document.getElementById('refreshFrequency').value;
 				intervalId = setInterval(function () {
+					$("#cpu-chart").empty();
+					$("#ram-chart").empty();
+					$("#download-chart").empty();
+					$("#upload-chart").empty();
+					$("#disk-chart").empty();
 					d3.csv("resources/cpu-usage.csv", function (data) {
 						data.forEach(function (d) {
 							data.USAGE = +data.USAGE;
