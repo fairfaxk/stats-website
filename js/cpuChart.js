@@ -1,25 +1,3 @@
-//Width and height
-var w = 300;
-var h = 300;
-
-var parseDate = d3.timeParse("%H:%M:%S");
-var formatTime = d3.timeFormat("%H:%M:%S");
-
-var outerRadius = w / 2;
-var innerRadius = w / 5;
-var arc = d3.arc()
-	.innerRadius(innerRadius)
-	.outerRadius(outerRadius);
-
-var pie = d3.pie();
-
-//Easy colors accessible via a 10-step ordinal scale
-var color = d3.scaleOrdinal()
-	.domain(d3.range(2))
-	.range(['#C0C0C0', '#007bff']);
-
-//var dataset = [ 5, 10, 20, 45, 6, 25 ];
-
 d3.csv("resources/cpu-usage.csv", function (data) {
 	data.forEach(function (d) {
 		data.USAGE = +data.USAGE;

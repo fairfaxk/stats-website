@@ -7,11 +7,103 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js"></script>
+	<script type="text/javascript" src="js/initChart.js"></script>
 	<script type="text/javascript" src="js/cpuChart.js"></script>
 	<script type="text/javascript" src="js/ramChart.js"></script>
 	<script type="text/javascript" src="js/downloadChart.js"></script>
 	<script type="text/javascript" src="js/uploadChart.js"></script>
 	<script type="text/javascript" src="js/diskChart.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			var intervalId;
+			var int;
+			int = document.getElementById('refreshFrequency').value;
+			intervalId = setInterval(function () {
+				d3.csv("resources/cpu-usage.csv", function (data) {
+					data.forEach(function (d) {
+						data.USAGE = +data.USAGE;
+						//console.log(data);
+					})
+					drawCPUChart(data);
+				})
+				d3.csv("resources/ram-usage.csv", function (data) {
+					data.forEach(function (d) {
+						data.USAGE = +data.USAGE;
+						data.TOTAL = +data.TOTAL;
+						//console.log(data);
+					})
+					drawRAMChart(data);
+				})
+				d3.csv("resources/download-usage.csv", function (data) {
+					data.forEach(function (d) {
+						data.USAGE = +data.USAGE;
+						//console.log(data);
+					})
+					drawDOWNLOADChart(data);
+				})
+				d3.csv("resources/upload-usage.csv", function (data) {
+					data.forEach(function (d) {
+						data.USAGE = +data.USAGE;
+						//console.log(data);
+					})
+					drawUPLOADChart(data);
+				})
+				d3.csv("resources/disk-usage.csv", function (data) {
+					data.forEach(function (d) {
+						data.USAGE = +data.USAGE;
+						data.TOTAL = +data.TOTAL;
+						//console.log(data);
+					})
+					drawDISKChart(data);
+				})
+			}, int);
+			document.getElementById('refreshFrequency').onchange = function () {
+				if (intervalId) {
+					clearInterval(intervalId);
+				}
+				int = document.getElementById('refreshFrequency').value;
+				intervalId = setInterval(function () {
+					d3.csv("resources/cpu-usage.csv", function (data) {
+						data.forEach(function (d) {
+							data.USAGE = +data.USAGE;
+							//console.log(data);
+						})
+						drawCPUChart(data);
+					})
+					d3.csv("resources/ram-usage.csv", function (data) {
+						data.forEach(function (d) {
+							data.USAGE = +data.USAGE;
+							data.TOTAL = +data.TOTAL;
+							//console.log(data);
+						})
+						drawRAMChart(data);
+					})
+					d3.csv("resources/download-usage.csv", function (data) {
+						data.forEach(function (d) {
+							data.USAGE = +data.USAGE;
+							//console.log(data);
+						})
+						drawDOWNLOADChart(data);
+					})
+					d3.csv("resources/upload-usage.csv", function (data) {
+						data.forEach(function (d) {
+							data.USAGE = +data.USAGE;
+							//console.log(data);
+						})
+						drawUPLOADChart(data);
+					})
+					d3.csv("resources/disk-usage.csv", function (data) {
+						data.forEach(function (d) {
+							data.USAGE = +data.USAGE;
+							data.TOTAL = +data.TOTAL;
+							//console.log(data);
+						})
+						drawDISKChart(data);
+					})
+				}, int);
+			}
+		}
+	</script>
 </head>
 
 <body>
