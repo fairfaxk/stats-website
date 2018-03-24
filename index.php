@@ -147,11 +147,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=CPUU" style="position:relative;top:180px;">CPU</a>
+				<a href="details.php?detail=CPUU" style="position:relative;top:165px;">CPU</a>
 				<div id="cpu-chart"></div>
 			</div>
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=RAMU" style="position:relative;top:180px;">RAM</a>
+				<a href="details.php?detail=RAMU" style="position:relative;top:165px;">RAM</a>
 				<div id="ram-chart"></div>
 			</div>
 		</div>
@@ -159,11 +159,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↓</a>
+				<a href="details.php?detail=NETU" style="position:relative;top:165px;">Network ↓</a>
 				<div id="download-chart"></div>
 			</div>
 			<div class="col-sm-6 text-center">
-				<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↑</a>
+				<a href="details.php?detail=NETU" style="position:relative;top:165px;">Network ↑</a>
 				<div id="upload-chart"></div>
 			</div>
 		</div>
@@ -171,7 +171,7 @@
 	<div class="container">
 		<div class="row ">
 			<div class="col-sm-12 text-center">
-				<a href="details.php?detail=DISU" style="position:relative;top:180px;">Disk</a>
+				<a href="details.php?detail=DISU" style="position:relative;top:165px;">Disk</a>
 				<div id="disk-chart"></div>
 			</div>
 		</div>
