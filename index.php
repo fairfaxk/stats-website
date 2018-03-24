@@ -146,38 +146,33 @@
 	<br />
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 text-center" id="cpu-chart">
-				<p>
-					<a href="details.php?detail=CPUU" style="position:relative;top:180px;">CPU</a>
-				</p>
+			<div class="col-sm-6 text-center">
+				<a href="details.php?detail=CPUU" style="position:relative;top:180px;">CPU</a>
+				<div id="cpu-chart"></div>
 			</div>
-			<div class="col-sm-6 text-center" id="ram-chart">
-				<p>
-					<a href="details.php?detail=RAMU" style="position:relative;top:180px;">RAM</a>
-				</p>
+			<div class="col-sm-6 text-center">
+				<a href="details.php?detail=RAMU" style="position:relative;top:180px;">RAM</a>
+				<div id="ram-chart"></div>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 text-center" id="download-chart">
-				<p>
-					<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↓</a>
-				</p>
+			<div class="col-sm-6 text-center">
+				<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↓</a>
+				<div id="download-chart"></div>
 			</div>
-			<div class="col-sm-6 text-center" id="upload-chart">
-				<p>
-					<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↑</a>
-				</p>
+			<div class="col-sm-6 text-center">
+				<a href="details.php?detail=NETU" style="position:relative;top:180px;">Network ↑</a>
+				<div id="upload-chart"></div>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row ">
-			<div class="col-sm-12 text-center" id="disk-chart">
-				<p>
-					<a href="details.php?detail=DISU" style="position:relative;top:180px;">Disk</a>
-				</p>
+			<div class="col-sm-12 text-center">
+				<a href="details.php?detail=DISU" style="position:relative;top:180px;">Disk</a>
+				<div id="disk-chart"></div>
 			</div>
 		</div>
 	</div>
