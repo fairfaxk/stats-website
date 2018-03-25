@@ -8,7 +8,7 @@ d3.csv("resources/ram-usage.csv", function (data) {
 })
 
 function drawRAMChart(data) {
-	var dataset = [data[0].TOTAL - data[0].USAGE, data[0].USAGE];
+	var dataset = [data[59].TOTAL - data[59].USAGE, data[59].USAGE];
 
 	//Create SVG element
 	var svg = d3.select('#ram-chart')
@@ -29,6 +29,54 @@ function drawRAMChart(data) {
 		.attr("fill", function (d, i) {
 			return color(i);
 		})
+		.transition().duration(1000)
+		.attr("d", arc);
+
+	//Labels
+	arcs.append("text")
+		.attr("transform", function (d) {
+			return "translate(" + arc.centroid(d) + ")";
+		})
+		.attr("text-anchor", "middle")
+		.text(function (d) {
+			if (d.index == 0)
+				return "Unused:"
+			else {
+				return "Used:"
+			}
+		});
+	arcs.append("text")
+		.attr("transform", function (d) {
+			return "translate(" + arc.centroid(d) + ")";
+		})
+		.attr("text-anchor", "middle")
+		.attr("dy", "1em")
+		.text(function (d) {
+			return d.value + ' mb';
+		});
+}
+
+function transitionRAMChart(data) {
+	var dataset = [data[59].TOTAL - data[59].USAGE, data[59].USAGE];
+
+	//Create SVG element
+	var svg = d3.select('#ram-chart');
+
+	//Set up groups
+	var arcs = svg.selectAll("g.arc")
+		.data(pie(dataset));
+	arcs.exit().remove();
+	arcs.enter()
+		.append("g")
+		.attr("class", "arc")
+		.attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
+
+	//Draw arc paths
+	arcs.append("path")
+		.attr("fill", function (d, i) {
+			return color(i);
+		})
+		.transition().duration(1000)
 		.attr("d", arc);
 
 	//Labels

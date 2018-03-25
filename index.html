@@ -20,17 +20,17 @@
 			var int;
 			int = document.getElementById('refreshFrequency').value;
 			intervalId = setInterval(function () {
-				$("#cpu-chart").empty();
-				$("#ram-chart").empty();
-				$("#download-chart").empty();
-				$("#upload-chart").empty();
-				$("#disk-chart").empty();
+				//$("#cpu-chart").empty();
+				//$("#ram-chart").empty();
+				//$("#download-chart").empty();
+				//$("#upload-chart").empty();
+				//$("#disk-chart").empty();
 				d3.csv("resources/cpu-usage.csv", function (data) {
 					data.forEach(function (d) {
 						data.USAGE = +data.USAGE;
 						//console.log(data);
 					})
-					drawCPUChart(data);
+					transitionCPUChart(data);
 				})
 				d3.csv("resources/ram-usage.csv", function (data) {
 					data.forEach(function (d) {
@@ -38,21 +38,21 @@
 						data.TOTAL = +data.TOTAL;
 						//console.log(data);
 					})
-					drawRAMChart(data);
+					transitionRAMChart(data);
 				})
 				d3.csv("resources/download-usage.csv", function (data) {
 					data.forEach(function (d) {
 						data.USAGE = +data.USAGE;
 						//console.log(data);
 					})
-					drawDOWNLOADChart(data);
+					transitionDOWNLOADChart(data);
 				})
 				d3.csv("resources/upload-usage.csv", function (data) {
 					data.forEach(function (d) {
 						data.USAGE = +data.USAGE;
 						//console.log(data);
 					})
-					drawUPLOADChart(data);
+					transitionUPLOADChart(data);
 				})
 				d3.csv("resources/disk-usage.csv", function (data) {
 					data.forEach(function (d) {
@@ -60,7 +60,7 @@
 						data.TOTAL = +data.TOTAL;
 						//console.log(data);
 					})
-					drawDISKChart(data);
+					transitionDISKChart(data);
 				})
 			}, int);
 			document.getElementById('refreshFrequency').onchange = function () {
