@@ -1,4 +1,6 @@
 var ctx = document.getElementById("cpuChart").getContext('2d');
+ctx.canvas.width = 300;
+ctx.canvas.height = 300;
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -16,8 +18,5 @@ var myChart = new Chart(ctx, {
             "Used",
             "Unused"
         ]
-    },
-    options: {
-        responsive: false
     }
 });
