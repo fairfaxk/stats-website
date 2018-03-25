@@ -1,11 +1,19 @@
+d3.csv("resources/cpu-usage.csv", function (data) {
+    data.forEach(function (d) {
+        data.USAGE = +data.USAGE;
+        //console.log(data);
+    })
+})
+var dataUsed = data[59].USAGE;
+var dataUnused = 100 - data[59].USAGE;
 var ctx = document.getElementById("cpuChart").getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'doughnut',
+    type: 'pie',
     data: {
         datasets: [{
             data: [
-                66,
-                34
+                dataUsed,
+                dataUnused
             ],
             backgroundColor: [
                 "#007bff",
