@@ -8,7 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js"></script>
-	<script type="text/javascript" src="js/initChart.js"></script>
 	<script type="text/javascript" src="js/cpuChart.js"></script>
 	<script type="text/javascript" src="js/ramChart.js"></script>
 	<script type="text/javascript" src="js/downloadChart.js"></script>
@@ -25,7 +24,6 @@
 						data.USAGE = +data.USAGE;
 						//console.log(data);
 					})
-					CPUchange(data);
 				})
 			}, int);
 			document.getElementById('refreshFrequency').onchange = function () {
