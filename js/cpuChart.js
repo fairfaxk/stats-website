@@ -1,4 +1,4 @@
-new Chart(document.getElementById("cpu-chart"), {
+var cpuChart = new Chart(document.getElementById("cpu-chart"), {
     type: 'doughnut',
     data: {
       labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
