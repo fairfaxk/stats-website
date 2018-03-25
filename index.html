@@ -6,8 +6,7 @@
 	<title>Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
 	<script type="text/javascript" src="js/cpuChart.js"></script>
 	<script type="text/javascript" src="js/ramChart.js"></script>
 	<script type="text/javascript" src="js/downloadChart.js"></script>
@@ -70,7 +69,7 @@
 		<div class="row">
 			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=CPUU" style="position:relative;top:165px;">CPU</a>
-				<div id="cpu-chart"></div>
+				<canvas id="cpu-chart" width="300" height="300"></canvas>
 			</div>
 			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=RAMU" style="position:relative;top:165px;">RAM</a>
