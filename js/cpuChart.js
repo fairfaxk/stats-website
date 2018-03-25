@@ -28,6 +28,7 @@ function drawCPUChart(data) {
 		.attr("fill", function (d, i) {
 			return color(i);
 		})
+		.transition().duration(1000)
 		.attr("d", arc);
 
 	//Labels
