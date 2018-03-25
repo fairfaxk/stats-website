@@ -3,107 +3,12 @@ d3.csv("resources/cpu-usage.csv", function (data) {
 		data.USAGE = +data.USAGE;
 		//console.log(data);
 	})
-	newFunction(data);
+	drawCPUChart(data);
 })
 
-function drawCPUChart(data) {
-	var dataset = [100 - data[59].USAGE, data[59].USAGE];
+function drawCPUChart(data){
 
-	//Create SVG element
-	var svg = d3.select('#cpu-chart')
-		.append("svg")
-		.attr("width", w)
-		.attr("height", h);
-
-	//Set up groups
-	var arcs = svg.selectAll("g.arc")
-		.data(pie(dataset))
-		.enter()
-		.append("g")
-		.attr("class", "arc")
-		.attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
-
-	//Draw arc paths
-	arcs.append("path")
-		.attr("fill", function (d, i) {
-			return color(i);
-		})
-		.attr("d", arc);
-
-	//Labels
-	arcs.append("text")
-		.attr("transform", function (d) {
-			return "translate(" + arc.centroid(d) + ")";
-		})
-		.attr("text-anchor", "middle")
-		.text(function (d) {
-			if (d.index == 0)
-				return "Unused:"
-			else {
-				return "Used:"
-			}
-		});
-	arcs.append("text")
-		.attr("transform", function (d) {
-			return "translate(" + arc.centroid(d) + ")";
-		})
-		.attr("text-anchor", "middle")
-		.attr("dy", "1em")
-		.text(function (d) {
-			return d.value + '%';
-		});
-}
-
-function transitionCPUChart(data) {
-	var dataset = [100 - data[59].USAGE, data[59].USAGE];
-
-	//Create SVG element
-	var svg = d3.select('#cpu-chart')
-
-	//Set up groups
-	var arcs = svg.selectAll("g.arc")
-		.data(pie(dataset))
-		.enter()
-		.append("g")
-		.attr("class", "arc")
-		.attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
-
-	//Draw arc paths
-	arcs.append("path")
-		.attr("fill", function (d, i) {
-			return color(i);
-		})
-		.transition().duration(1000)
-		.attr("d", arc);
-
-	//Labels
-	arcs.append("text")
-		.attr("transform", function (d) {
-			return "translate(" + arc.centroid(d) + ")";
-		})
-		.attr("text-anchor", "middle")
-		.text(function (d) {
-			if (d.index == 0)
-				return "Unused:"
-			else {
-				return "Used:"
-			}
-		});
-	arcs.append("text")
-		.attr("transform", function (d) {
-			return "translate(" + arc.centroid(d) + ")";
-		})
-		.attr("text-anchor", "middle")
-		.attr("dy", "1em")
-		.text(function (d) {
-			return d.value + '%';
-		});
-	arcs.exit().remove();
-}
-
-function newFunction(data){
-
-	var data1 = [100 - data[59].USAGE, data[59].USAGE];
+	var latestData = [100 - data[59].USAGE, data[59].USAGE];
 
 	var svg = d3.select("#cpu-chart").append("svg")
 	    .attr("width", w)
@@ -113,12 +18,12 @@ function newFunction(data){
 	    .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
 
 	CPUpath = svg.selectAll("g.arc")
-	    .data(pie(data1))
+	    .data(pie(latestData))
 	    .enter()
 	    .append("path")
 
 	CPUpath.transition()
-	    .duration(500)
+	    .duration(1000)
 	    .attr("fill", function(d, i) {
 	        return color(i);
 	    })
@@ -156,8 +61,8 @@ function newFunction(data){
 }
 
 function CPUchange(data) {
-		var dataset = [100 - data[59].USAGE, data[59].USAGE];
-		CPUpath.data(pie(dataset));
+		var latestData = [100 - data[59].USAGE, data[59].USAGE];
+		CPUpath.data(pie(latestData));
 		CPUpath.transition().duration(1000).attrTween("d", arcTween); // redraw the arcs
 
 		// Store the displayed angles in _current.

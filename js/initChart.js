@@ -11,11 +11,16 @@ var arc = d3.arc()
 	.innerRadius(innerRadius)
 	.outerRadius(outerRadius);
 
-var pie = d3.pie().sort(null);
+var pie = d3.pie()
+	.sort(null);
 
 //Easy colors accessible via a 10-step ordinal scale
 var color = d3.scaleOrdinal()
 	.domain(d3.range(2))
 	.range(['#C0C0C0', '#007bff']);
 
-var CPUpath
+var CPUpath;
+var RAMpath;
+var DOWNLOADpath;
+var UPLOADpath;
+var DISKpath;
