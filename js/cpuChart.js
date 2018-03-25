@@ -1,21 +1,27 @@
-window.onload = function () {
-    new Chart(document.getElementById("cpu-chart"), {
-        type: 'doughnut',
-        data: {
-            labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-            datasets: [
-                {
-                    label: "Population (millions)",
-                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                    data: [2478, 5267, 734, 784, 433]
-                }
+var cpuCanvas = document.getElementById("cpu-chart");
+
+var cpuData = {
+    labels: [
+        "Saudi Arabia",
+        "Russia",
+        "Iraq",
+        "United Arab Emirates",
+        "Canada"
+    ],
+    datasets: [
+        {
+            data: [133.3, 86.2, 52.2, 51.2, 50.2],
+            backgroundColor: [
+                "#FF6384",
+                "#63FF84",
+                "#84FF63",
+                "#8463FF",
+                "#6384FF"
             ]
-        },
-        options: {
-            title: {
-                display: true,
-                text: 'Predicted world population (millions) in 2050'
-            }
-        }
-    });
-}
+        }]
+};
+
+var pieChart = new Chart(cpuCanvas, {
+  type: 'doughnut',
+  data: cpuData
+});
