@@ -4,8 +4,8 @@ var myChart = new Chart(ctx, {
     data: {
         datasets: [{
             data: [
-                "66%",
-                "34%"
+                "66",
+                "34"
             ],
             backgroundColor: [
                 "#007bff",
