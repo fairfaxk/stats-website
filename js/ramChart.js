@@ -1,14 +1,13 @@
-function drawRAMChart() {
-    d3.csv("resources/ram-usage.csv", function (data) {
+function drawCPUChart() {
+    d3.csv("resources/cpu-usage.csv", function (data) {
         data.forEach(function (d) {
             data.USAGE = +data.USAGE;
-            data.TOTAL = +data.TOTAL;
             //console.log(data);
         })
         var dataUsed = data[59].USAGE;
-        var dataUnused = data[59].TOTAL - data[59].USAGE;
-        var ctxRAM = document.getElementById("ramChart").getContext('2d');
-        var ramChart = new Chart(ctxRAM, {
+        var dataUnused = 100 - data[59].USAGE;
+        var ctxCPU = document.getElementById("cpuChart").getContext('2d');
+        var cpuChart = new Chart(ctxCPU, {
             type: 'pie',
             data: {
                 datasets: [{
@@ -22,8 +21,8 @@ function drawRAMChart() {
                     ]
                 }],
                 labels: [
-                    "MB Used",
-                    "MB Available"
+                    "% Used",
+                    "% Available"
                 ]
             },
             options: {
