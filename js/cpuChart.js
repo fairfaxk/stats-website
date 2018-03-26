@@ -1,15 +1,12 @@
 function drawCPUChart() {
-    var dataUsed;
-    var dataUnused;
     var csvData = d3.csv("resources/cpu-usage.csv", function (data) {
         data.forEach(function (d) {
             data.USAGE = +data.USAGE;
             //console.log(data);
-            dataUsed = data[60].USAGE;
-            dataUnused = 100 - data[60].USAGE;
+            return data[60].USAGE;
         })
     })
-    console.log(dataUsed);
+    console.log(csvData);
     var ctx = document.getElementById("cpuChart").getContext('2d');
     var cpuChart = new Chart(ctx, {
         type: 'pie',
