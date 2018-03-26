@@ -16,8 +16,8 @@ var myChart = new Chart(ctx, {
     data: {
         datasets: [{
             data: [
-                33,
-                67
+                parseInt(dataUsed),
+                parseInt(dataUnused)
             ],
             backgroundColor: [
                 "#007bff",
@@ -26,7 +26,7 @@ var myChart = new Chart(ctx, {
         }],
         labels: [
             "% Used",
-            "% Un-Used"
+            "% Available"
         ]
     },
     options: {
