@@ -29,6 +29,9 @@ function drawDISKChart() {
             options: {
                 legend: {
                     display: false
+                },
+                animation: {
+                    duration: 0
                 }
             }
         });
@@ -174,6 +177,11 @@ function drawDISKDetail() {
                         borderColor: "#007bff",
                         fill: true
                     }]
+                },
+                options: {
+                    animation: {
+                        duration: 0
+                    }
                 }
             });
         })

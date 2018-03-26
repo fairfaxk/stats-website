@@ -29,6 +29,9 @@ function drawRAMChart() {
             options: {
                 legend: {
                     display: false
+                },
+                animation: {
+                    duration: 0
                 }
             }
         });
@@ -174,6 +177,11 @@ function drawRAMDetail() {
                         borderColor: "#007bff",
                         fill: true
                     }]
+                },
+                options: {
+                    animation: {
+                        duration: 0
+                    }
                 }
             });
         })

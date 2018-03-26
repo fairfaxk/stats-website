@@ -28,6 +28,9 @@ function drawUPLOADChart() {
             options: {
                 legend: {
                     display: false
+                },
+                animation: {
+                    duration: 0
                 }
             }
         });
@@ -173,6 +176,11 @@ function drawUPLOADDetail() {
                         borderColor: "#007bff",
                         fill: true
                     }]
+                },
+                options: {
+                    animation: {
+                        duration: 0
+                    }
                 }
             });
         })
