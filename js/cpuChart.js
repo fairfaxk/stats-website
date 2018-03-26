@@ -21,8 +21,8 @@ function drawCPUChart() {
                     ]
                 }],
                 labels: [
-                    "% Used",
-                    "% Available"
+                    "% used",
+                    "% available"
                 ]
             },
             options: {

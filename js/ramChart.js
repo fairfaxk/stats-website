@@ -22,8 +22,8 @@ function drawRAMChart() {
                     ]
                 }],
                 labels: [
-                    "MB Used",
-                    "MB Available"
+                    "mb used",
+                    "mb available"
                 ]
             },
             options: {
