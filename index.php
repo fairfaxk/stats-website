@@ -19,7 +19,7 @@
 			var int;
 			int = document.getElementById('refreshFrequency').value;
 			intervalId = setInterval(function () {
-				drawCPUChart();
+				updateCPUChart();
 				drawRAMChart();
 				drawDOWNLOADChart();
 				drawUPLOADChart();
@@ -31,7 +31,7 @@
 				}
 				int = document.getElementById('refreshFrequency').value;
 				intervalId = setInterval(function () {
-					drawCPUChart();
+					updateCPUChart();
 					drawRAMChart();
 					drawDOWNLOADChart();
 					drawUPLOADChart();
