@@ -12,18 +12,18 @@
 		window.onload = function () {
 			drawCPUChart();
 			drawRAMChart();
-			drawDownloadChart();
-			drawUploadChart();
-			drawDiskChart();
+			drawDOWNLOADChart();
+			drawUPLOADChart();
+			drawDISKChart();
 			var intervalId;
 			var int;
 			int = document.getElementById('refreshFrequency').value;
 			intervalId = setInterval(function () {
 				drawCPUChart();
 				drawRAMChart();
-				drawDownloadChart();
-				drawUploadChart();
-				drawDiskChart();
+				drawDOWNLOADChart();
+				drawUPLOADChart();
+				drawDISKChart();
 			}, int);
 			document.getElementById('refreshFrequency').onchange = function () {
 				if (intervalId) {
@@ -33,9 +33,9 @@
 				intervalId = setInterval(function () {
 					drawCPUChart();
 					drawRAMChart();
-					drawDownloadChart();
-					drawUploadChart();
-					drawDiskChart();
+					drawDOWNLOADChart();
+					drawUPLOADChart();
+					drawDISKChart();
 				}, int);
 			}
 		}
