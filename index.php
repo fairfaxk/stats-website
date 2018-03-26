@@ -74,12 +74,12 @@
 			<div class="col-sm-2 text-center"></div>
 			<div class="col-sm-3 text-center">
 				<a href="details.php?detail=CPUU">CPU</a>
-				<canvas id="cpuChart"></canvas>
+				<canvas id="cpuChart" width="300" height="300"></canvas>
 			</div>
 			<div class="col-sm-2 text-center"></div>
 			<div class="col-sm-3 text-center">
 				<a href="details.php?detail=RAMU">RAM</a>
-				<div id="ramChart"></div>
+				<div id="ramChart" width="300" height="300"></div>
 			</div>
 			<div class="col-sm-2 text-center"></div>
 		</div>
