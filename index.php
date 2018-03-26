@@ -53,7 +53,7 @@
 					<span class="input-group-addon" style="color:red;padding:6px 0px;">Refresh Frequency</span>
 					&nbsp;
 					<select id="refreshFrequency" class="form-control">
-						<option value="5000" selected>5 Seconds</option>
+						<option value="1000" selected>5 Seconds</option>
 						<option value="15000">15 Seconds</option>
 						<option value="30000">30 Seconds</option>
 						<option value="60000">1 Minute</option>
