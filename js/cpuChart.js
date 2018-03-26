@@ -24,11 +24,6 @@ function drawCPUChart() {
                     "% used",
                     "% available"
                 ]
-            },
-            options: {
-                legend: {
-                    display: false
-                }
             }
         });
     })
