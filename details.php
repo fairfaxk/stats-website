@@ -11,19 +11,19 @@
     <script type="text/javascript">
 		window.onload = function () {
 			drawCPUDetail();
-			/*drawRAMDetail();
+			drawRAMDetail();
 			drawDOWNLOADDetail();
 			drawUPLOADDetail();
-			drawDISKDetail();*/
+			drawDISKDetail();
 			var intervalId;
 			var int;
 			int = document.getElementById('refreshFrequency').value;
 			intervalId = setInterval(function () {
 				drawCPUDetail();
-				/*drawRAMDetail();
+				drawRAMDetail();
 				drawDOWNLOADDetail();
 				drawUPLOADDetail();
-				drawDISKDetail();*/
+				drawDISKDetail();
 			}, int);
 			document.getElementById('refreshFrequency').onchange = function () {
 				if (intervalId) {
@@ -32,10 +32,10 @@
 				int = document.getElementById('refreshFrequency').value;
 				intervalId = setInterval(function () {
 					drawCPUDetail();
-					/*drawRAMDetail();
+					drawRAMDetail();
 					drawDOWNLOADDetail();
 					drawUPLOADDetail();
-					drawDISKDetail();*/
+					drawDISKDetail();
 				}, int);
 			}
 		}

@@ -169,7 +169,7 @@ function drawCPUDetail() {
                             data[58].USAGE,
                             data[59].USAGE
                         ],
-                        label: "CPU Usage",
+                        label: "CPU Usage (%)",
                         borderColor: "#007bff",
                         fill: true
                     }]
