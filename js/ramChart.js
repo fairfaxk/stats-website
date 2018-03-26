@@ -5,8 +5,8 @@ function drawRAMChart() {
             data.TOTAL = +data.TOTAL;
             //console.log(data);
         })
-        dataUsed = data[59].USAGE;
-        dataUnused = data[59].TOTAL - data[59].USAGE;
+        var dataUsed = data[59].USAGE;
+        var dataUnused = data[59].TOTAL - data[59].USAGE;
         var ctx = document.getElementById("ramChart").getContext('2d');
         var ramChart = new Chart(ctx, {
             type: 'pie',
