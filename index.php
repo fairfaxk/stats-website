@@ -10,20 +10,20 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 	<script type="text/javascript">
 		window.onload = function () {
-			drawCPUChart();
+			//drawCPUChart();
 			drawRAMChart();
-			drawDownloadChart();
+			/*drawDownloadChart();
 			drawUploadChart();
-			drawDiskChart();
+			drawDiskChart();*/
 			var intervalId;
 			var int;
 			int = document.getElementById('refreshFrequency').value;
 			intervalId = setInterval(function () {
 				drawCPUChart();
 				drawRAMChart();
-				drawDownloadChart();
+				/*drawDownloadChart();
 				drawUploadChart();
-				drawDiskChart();
+				drawDiskChart();*/
 			}, int);
 			document.getElementById('refreshFrequency').onchange = function () {
 				if (intervalId) {
@@ -33,9 +33,9 @@
 				intervalId = setInterval(function () {
 					drawCPUChart();
 					drawRAMChart();
-					drawDownloadChart();
+					/*drawDownloadChart();
 					drawUploadChart();
-					drawDiskChart();
+					drawDiskChart();*/
 				}, int);
 			}
 		}
