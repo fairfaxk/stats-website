@@ -1,11 +1,14 @@
 function drawCPUChart() {
-    d3.csv("resources/cpu-usage.csv", function (data) {
+    var data = d3.csv("resources/cpu-usage.csv", function (data) {
         data.forEach(function (d) {
             data.USAGE = +data.USAGE;
             //console.log(data);
+            return data;
         })
-        var dataUsed = data[59].USAGE;
-        var dataUnused = 100 - data[59].USAGE;
+    })
+    console.log(data[60].USAGE);
+        var dataUsed = data[60].USAGE;
+        var dataUnused = 100 - data[60].USAGE;
         var ctx = document.getElementById("cpuChart").getContext('2d');
         var cpuChart = new Chart(ctx, {
             type: 'pie',
@@ -31,5 +34,4 @@ function drawCPUChart() {
                 }
             }
         });
-    })
 }
