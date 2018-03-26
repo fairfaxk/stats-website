@@ -42,13 +42,13 @@
             <div class="col-sm-12 text-center">
                 <?php
                     if ($_GET["detail"] == "CPUU"){
-                        echo "CPU USAGE";
+                        echo "<canvas id='cpuDetail'></canvas>";
                     }else if ($_GET["detail"] == "RAMU"){
-                        echo "RAM USAGE";
-                    }else if ($_GET["detail"] == "DISU"){
-                        echo "DISK USAGE";
+                        echo "<canvas id='ramDetail'></canvas>";
                     }else if ($_GET["detail"] == "NETU"){
-                        echo "NETWORK USAGE";
+                        echo "<canvas id='downloadDetail'></canvas><canvas id='uploadDetail'></canvas>";
+                    }else if ($_GET["detail"] == "DISU"){
+                        echo "<canvas id='diskDetail'></canvas>";
                     }else{
                         header('Location: index.php');
                     }
