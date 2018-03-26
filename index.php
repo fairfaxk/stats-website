@@ -14,7 +14,7 @@
 			var int;
 			int = document.getElementById('refreshFrequency').value;
 			intervalId = setInterval(function () {
-				
+				drawCPUChart();
 			}, int);
 			document.getElementById('refreshFrequency').onchange = function () {
 				if (intervalId) {
@@ -22,7 +22,7 @@
 				}
 				int = document.getElementById('refreshFrequency').value;
 				intervalId = setInterval(function () {
-					
+					drawCPUChart();
 				}, int);
 			}
 		}
