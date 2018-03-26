@@ -1,6 +1,5 @@
 function drawCPUChart() {
-    var reader = new FileReader();
-    var content = reader.readAsText("resources/cpu-usage.csv");
+    var content = requestCSV("resources/cpu-usage.csv");
     var data = csv2array(content);
     var dataUsed = data[60][1];
     var dataUnused = 100 - data[60][1];
