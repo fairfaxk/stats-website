@@ -11,13 +11,12 @@ d3.csv("resources/cpu-usage.csv", function (data) {
     console.log(dataUnused);
 })
 var ctx = document.getElementById("cpuChart").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'pie',
+var data = {
     data: {
         datasets: [{
             data: [
-                1.68,
-                98.32
+                dataUsed,
+                dataUnused
             ],
             backgroundColor: [
                 "#007bff",
@@ -34,4 +33,5 @@ var myChart = new Chart(ctx, {
             display: false
         }
     }
-});
+}
+var cpuChart = new Chart(ctx).Pie(data);
