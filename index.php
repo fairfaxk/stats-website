@@ -71,42 +71,36 @@
 	<br />
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-1 text-center"></div>
-			<div class="col-sm-4 text-center">
+			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=CPUU">CPU</a>
 				<canvas id="cpuChart"></canvas>
 			</div>
-			<div class="col-sm-2 text-center"></div>
-			<div class="col-sm-4 text-center">
+			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=RAMU">RAM</a>
 				<canvas id="ramChart"></canvas>
 			</div>
-			<div class="col-sm-1 text-center"></div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-1 text-center"></div>
-			<div class="col-sm-4 text-center">
+			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=NETU">Network ↓</a>
 				<canvas id="downloadChart"></canvas>
 			</div>
-			<div class="col-sm-2 text-center"></div>
-			<div class="col-sm-4 text-center">
+			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=NETU">Network ↑</a>
 				<canvas id="uploadChart"></canvas>
 			</div>
-			<div class="col-sm-1 text-center"></div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row ">
-			<div class="col-sm-4 text-center"></div>
-			<div class="col-sm-4 text-center">
+			<div class="col-sm-3 text-center"></div>
+			<div class="col-sm-6 text-center">
 				<a href="details.php?detail=DISU">Disk</a>
 				<canvas id="diskChart"></canvas>
 			</div>
-			<div class="col-sm-4 text-center"></div>
+			<div class="col-sm-3 text-center"></div>
 		</div>
 	</div>
 </body>
