@@ -6,8 +6,8 @@ function drawCPUChart() {
         })
         var dataUsed = data[59].USAGE;
         var dataUnused = 100 - data[59].USAGE;
-        var ctx = document.getElementById("cpuChart").getContext('2d');
-        var cpuChart = new Chart(ctx, {
+        var ctxCPU = document.getElementById("cpuChart").getContext('2d');
+        var cpuChart = new Chart(ctxCPU, {
             type: 'pie',
             data: {
                 datasets: [{
