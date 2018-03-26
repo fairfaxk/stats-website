@@ -16,8 +16,8 @@ var myChart = new Chart(ctx, {
     data: {
         datasets: [{
             data: [
-                parseInt(dataUsed),
-                parseInt(dataUnused)
+                1.68,
+                98.32
             ],
             backgroundColor: [
                 "#007bff",
