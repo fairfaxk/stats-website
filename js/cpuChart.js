@@ -4,7 +4,7 @@ function drawCPUChart() {
             data.USAGE = +data.USAGE;
             //console.log(data);
         })
-        return data[60].USAGE;
+        return data[59].USAGE;
     })
     console.log(csvData);
     var ctx = document.getElementById("cpuChart").getContext('2d');
